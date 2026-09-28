@@ -1,23 +1,58 @@
 aid: bitcoinunlimited
+
 name: Bitcoinunlimited
-description: 'Bitcoinunlimited is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+
+description: 'Bitcoin Unlimited is a community-driven organization focused on the development and promotion of Bitcoin as a peer‑to‑peer electronic cash system. It advocates for larger block sizes to increase transaction throughput, supports the Bitcoin Unlimited client software, and provides educational resources, forums, and tools for developers and users to engage with the Bitcoin ecosystem.'
+
 url: https://raw.githubusercontent.com/api-evangelist/bitcoinunlimited/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-09-28 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-09-28'
+
 modified: '2026-09-28'
+
+x-coverage:
+  state: unreadable
+  reason: js-rendered-docs
+  detail: "Main site returns a JavaScript shell with no machine‑readable API spec"
+  evidence:
+    - url: https://bitcoinunlimited.org
+      status: 200
+  checked: '2026-09-28'
+
 tags:
 - Company
-apis: []
+- Bitcoin
+- Cryptocurrency
+- OpenSource
+- Community
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: Hosts
+  url: hosts/bitcoinunlimited-hosts.yml
+- type: DomainSecurity
+  url: security/bitcoinunlimited-domain-security.yml
 - type: Website
-  url: https://equityzen.com/company/bitcoinunlimited
+  url: https://bitcoinunlimited.org
+
+apis: []
+x-enrichment:
+  date: '2026-09-28'
+  status: enriched
+  artifacts_added: 4
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local,regulatory=local
